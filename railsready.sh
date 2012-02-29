@@ -77,7 +77,22 @@ echo -e "\nThis script is always changing."
 echo "Make sure you got it from https://github.com/joshfng/railsready"
 
 # Check if the user has sudo privileges.
-sudo -v >/dev/null 2>&1 || { echo $script_runner has no sudo privileges ; exit 1; }
+echo -e "\n"
+echo "Does your user have sudo privileges?"
+echo "=> 1. I have sudo privileges "
+echo "=> 2. Please check for me [Default]"
+echo -n "Select [1 or 2]? "
+read sudoer
+  
+if [ "$sudoer" == "1" ] ; then
+  echo -e "\n\n!!! Ready to select a Ruby build !!! \n"
+elif [ "$sudoer" == "2" ] ; then
+  sudo -v >/dev/null 2>&1 || { echo $script_runner has no sudo privileges ; exit 1; }
+else
+  echo -e "\n\n!!! You must choose one !!! \n"
+  exit 1
+fi
+
 
 # Ask if you want to build Ruby or install RVM
 echo -e "\n"
