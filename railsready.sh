@@ -80,7 +80,7 @@ echo "Make sure you got it from https://github.com/joshfng/railsready"
 echo -e "\n"
 echo "Does your user have sudo privileges?"
 echo "=> 1. I have sudo privileges "
-echo "=> 2. Please check for me [Default]"
+echo "=> 2. Please check for me"
 echo -n "Select [1 or 2]? "
 read sudoer
   
