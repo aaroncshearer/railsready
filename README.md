@@ -1,4 +1,7 @@
 #Rails Ready
+````
+This fork includes a bypass option for installing on Amazon ec2
+````
 ###Ruby and Rails setup script for Linux and OSX
 ###Distros supported:
  * Ubuntu 10.04 LTS, 10.10 and 11.04
